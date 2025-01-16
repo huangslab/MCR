@@ -1,7 +1,6 @@
 # Tic-Tac-Toe Game Implementation (Improved)
 
-# Board size
-BOARD_SIZE = 3
+
 
 # Function to print the current state of the board
 def print_board(board):
@@ -71,5 +70,14 @@ def play_game():
 
 # Main function to start the game
 if __name__ == "__main__":
+    
     print("Welcome to Tic-Tac-Toe!")
-    play_game()
+    print("Welcome to Tic-Tac-Toe!")
+    
+    # Get board size from the user
+    try:
+        BOARD_SIZE = int(input(f"Enter the size of the board ({MIN_BOARD_SIZE}-{MAX_BOARD_SIZE}): "))
+        if board_SIZE < MIN_BOARD_SIZE or board_size > MAX_BOARD_SIZE:
+            print(f"Board size must be between {MIN_BOARD_SIZE} and {MAX_BOARD_SIZE}.")
+        else:
+            play_game(board_size)
